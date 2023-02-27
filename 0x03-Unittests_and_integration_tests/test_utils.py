@@ -5,6 +5,7 @@ import unittest
 from typing import Mapping, Sequence, Any
 
 from parameterized import parameterized
+
 get_json = __import__("utils").get_json
 access_nested_map = __import__("utils").access_nested_map
 
@@ -31,11 +32,6 @@ class TestAccessNestedMap(unittest.TestCase):
         """checks whether the function gives the correct errors"""
         with self.assertRaises(KeyError):
             access_nested_map(nested_map, key)
-
-
-class TestGetJson(unittest.TestCase):
-    """class to test get_json function"""
-    def test_get_json(self):
 
 
 if __name__ == "__main__":
